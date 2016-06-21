@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "StenoKeyboard Custom Dictionary",
+  "short_name": "StenoKeyboard-Dictionary",
+  "description": "Use your personal dictionaries with the StenoKeyboard extension",
+  "author": "Brent Nesbitt",
+  "version": "0.0.1",
+  "version_name": "v0.0 pre-release-1",
+  "minimum_chrome_version": "38",
+
+  "icons": {
+    "128": "assets/icon_128.png"
+  },
+  
+  "app": {
+    "background": {
+      "scripts": ["js/background.js"]
+    }
+  },
+
+
+  "permissions": [
+    "storage",
+    "fileSystem"
+  ]
+
+}
