@@ -34,9 +34,11 @@ function add_dictionary(dictionary) {
   var dictList = document.getElementById('dictionaryList');
   var label = document.createElement("label");
   label.appendChild(document.createTextNode(dictionary.name));  
+  label.setAttribute("style", "height:15px;width:250px;vertical-aligh:middle;display:inline-block");
   label.className = 'dictionary';
   var btnDel = document.createElement("button");
   btnDel.appendChild(document.createTextNode("X"));
+  btnDel.setAttribute("style", "vertical-align:middle");
   btnDel.onclick = function() {
     DICTIONARIES.splice(index, 1);
     dictList.removeChild(label);

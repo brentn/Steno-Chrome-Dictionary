@@ -8,6 +8,15 @@ chrome.app.runtime.onLaunched.addListener(function() {
 });
 
 chrome.runtime.onMessageExternal.addListener(function(request, sender, sendResponse) {
+  if (request.action == "launch") {
+    chrome.app.window.create('index.html', {
+      'outerBounds': {
+        'width': 400,
+        'height': 500
+      }
+    });
+  }
+  
   if (request.action == "loadDictionaries") {
     var response = {status:"FAIL"};
     var dictionaries = [];
