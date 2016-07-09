@@ -8,6 +8,10 @@ chrome.app.runtime.onLaunched.addListener(function() {
 });
 
 chrome.runtime.onMessageExternal.addListener(function(request, sender, sendResponse) {
+  if (request.action == 'version') {
+    sendResponse(chrome.app.getDetails().version);
+  }
+  
   if (request.action == "launch") {
     chrome.app.window.create('index.html', {
       'outerBounds': {
