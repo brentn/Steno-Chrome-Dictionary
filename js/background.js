@@ -9,7 +9,8 @@ chrome.app.runtime.onLaunched.addListener(function() {
 
 chrome.runtime.onMessageExternal.addListener(function(request, sender, sendResponse) {
   if (request.action == 'version') {
-    sendResponse(chrome.app.getDetails().version);
+    sendResponse(chrome.runtime.getManifest().version);
+    return true;
   }
   
   if (request.action == "launch") {

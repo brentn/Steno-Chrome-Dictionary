@@ -4,8 +4,8 @@
   "short_name": "StenoKeyboard-Dictionary",
   "description": "Use your personal steno dictionaries (in Plover format) with the StenoKeyboard chrome extension",
   "author": "Brent Nesbitt",
-  "version": "0.0.4",
-  "version_name": "v0.0 pre-release-4",
+  "version": "0.0.5",
+  "version_name": "v0.0 pre-release-5",
   "minimum_chrome_version": "38",
 
   "icons": {
