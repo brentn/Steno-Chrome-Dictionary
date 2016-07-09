@@ -1,4 +1,5 @@
 var DICTIONARIES = [];
+var IMEPluginID = '	immagadhjngfopbgndmnpcmbjcohicpp';
 
 function save_options() {
   chrome.storage.sync.set({ DICTIONARIES: DICTIONARIES }, function() {
@@ -9,6 +10,8 @@ function save_options() {
       status.textContent = '';
     }, 750);
   });
+  chrome.runtime.sendMessage(IMEPluginID, {action: "reload"});
+  window.close();
 }
 
 function restore_options() {
